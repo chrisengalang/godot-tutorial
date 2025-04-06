@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdr0lyswaxylt"]
+
+[ext_resource type="Texture2D" uid="uid://svgow86alub3" path="res://kenney space shooter assets/PNG/playerShip1_blue.png" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://caunos8xxlw0m" path="res://back.png" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bn7453x5itgwv" path="res://player.gd" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bl1w4wksaa0ax" path="res://kenney space shooter assets/PNG/Lasers/laserBlue01.png" id="4_1bvp3"]
+
+[node name="Main" type="Node2D"]
+
+[node name="SpaceBackground" type="Sprite2D" parent="."]
+position = Vector2(283, 475.5)
+scale = Vector2(0.357422, 0.746745)
+texture = ExtResource("1_ig7tw")
+metadata/_edit_lock_ = true
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(280, 900)
+script = ExtResource("2_h2yge")
+
+[node name="ShipGraphic" type="Sprite2D" parent="Player"]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_0xm2m")
+
+[node name="Laser" type="Node2D" parent="."]
+
+[node name="LaserGraphic" type="Sprite2D" parent="Laser"]
+texture = ExtResource("4_1bvp3")
